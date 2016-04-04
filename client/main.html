@@ -1,20 +1,29 @@
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <title>simple</title>
 </head>
-
 <body>
-  <h1>Welcome to Hedge!</h1>
-
-  {{> hello}}
-  {{> info}}
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <img src="/exes.gif" />
+      <h1>Welcome to Hedge!</h1>
+      {{> info}}
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="info">
+  <p>You want to date enough people to get a sense of your options, but you don't want to leave the choice too long and risk missing your ideal match. You need some kind of formula that balances the risk of stopping too soon against the risk of stopping too late.</p>
+<p>If you just choose randomly, your odds of picking the best of 11 suitors is about 9 percent. But if you use this method above, the probability of picking the best of the bunch increases significantly, to 37 percent — not a sure bet, but much better than random.</p>
 </template>
 
-<template name="info">
+
+
+<template name="oldInfo">
   <h2>Learn Meteor!</h2>
   <ul>
     <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
@@ -22,4 +31,9 @@
     <li><a href="https://docs.meteor.com">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com">Discussions</a></li>
   </ul>
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
 </template>
